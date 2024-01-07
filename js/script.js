@@ -1,9 +1,21 @@
-const pom = document.querySelector('#som_tecla_pom')
-const clap = document.querySelector('#som_tecla_clap')
-const tim = document.querySelector('#som_tecla_tim')
-const puff = document.querySelector('#som_tecla_puff')
-const splash = document.querySelector('#som_tecla_splash')
-const toim = document.querySelector('#som_tecla_toim')
-const psh = document.querySelector('#som_tecla_psh')
-const tic = document.querySelector('#som_tecla_tic')
-const tom = document.querySelector('#som_tecla_top')
+
+function pomBt(idElementoAudio){
+    document.querySelector(idElementoAudio).play();
+}
+
+const teclasSomBt = document.querySelectorAll('.tecla');
+
+let contador = 0;
+
+while(contador < teclasSomBt.length){
+      teclasSomBt[contador].onclick = function(){
+            pomBt('#som_tecla_tom');
+      };
+     
+      contador = contador +1;
+
+      console.log(contador);
+}
+
+
+
